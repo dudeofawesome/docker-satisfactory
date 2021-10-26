@@ -2,6 +2,8 @@
 
 This is the official dedicated Satisfactory server, packed as a Docker image. It's currently in an experimental state. Be aware that things may change.
 
+![Server logs and game](screenshot.jpg)
+
 ## Usage
 
 Without docker-compose:
