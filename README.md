@@ -37,3 +37,9 @@ volumes:
 ```
 
 The first server start up takes a while since the server files are downloaded from Steam. After the container was created and all the server files were downloaded initially, the server start up should be much faster.
+
+## Environment variables
+
+### `EXPERIMENTAL`
+
+Setting it to `true` will download the experimental version of the server. Notice that to re-download the game, the container needs to be re-created.
