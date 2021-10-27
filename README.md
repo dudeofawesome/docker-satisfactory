@@ -9,12 +9,14 @@ This is the official dedicated Satisfactory server, packed as a Docker image. It
 Without docker-compose:
 
 ```sh
-docker volume create satisfactory
+docker volume create satisfactory-server
+docker volume create satisfactory-saves
 docker run \
   -p 15777:15777/udp \
   -p 15000:15000/udp \
   -p 7777:7777/udp \
-  -v satisfactory:/home/steam/satisfactory/FactoryGame/Saved/ \
+  -v satisfactory-server:/home/steam/satisfactory/ \
+  -v satisfactory-saves:/home/steam/.config/Epic/FactoryGame/Saved/SaveGames/server/ \
   therealhenning/satisfactory:latest
 ```
 
@@ -30,10 +32,12 @@ services:
       - "15000:15000/udp"
       - "7777:7777/udp"
     volumes:
-      - satisfactory:/home/steam/satisfactory/FactoryGame/Saved/
+      - satisfactory-server:/home/steam/satisfactory/FactoryGame/Saved/
+      - satisfactory-saves:/home/steam/.config/Epic/FactoryGame/Saved/SaveGames/server/
 
 volumes:
-  satisfactory: {}
+  satisfactory-server: {}
+  satisfactory-saves: {}
 ```
 
 The first server start up takes a while since the server files are downloaded from Steam. After the container was created and all the server files were downloaded initially, the server start up should be much faster.
@@ -42,4 +46,4 @@ The first server start up takes a while since the server files are downloaded fr
 
 ### `EXPERIMENTAL`
 
-Setting it to `true` will download the experimental version of the server. Notice that to re-download the game, the container needs to be re-created.
+Setting it to `true` will download the experimental version of the server.
