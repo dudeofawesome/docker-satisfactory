@@ -12,4 +12,4 @@ if [[ ! -f "$INSTALL_DIR/FactoryServer.sh" ]]; then
     /home/steam/steamcmd/steamcmd.sh +login anonymous +force_install_dir $INSTALL_DIR +app_update $APP_ID $EXPERIMENTAL_FLAG +quit
 fi
 
-$INSTALL_DIR/FactoryServer.sh
+$INSTALL_DIR/FactoryServer.sh -ServerQueryPort=$SERVER_QUERY_PORT -BeaconPort=$BEACON_PORT -Port=$PORT

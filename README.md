@@ -46,4 +46,16 @@ The first server start up takes a while since the server files are downloaded fr
 
 ### `EXPERIMENTAL`
 
-Setting it to `true` will download the experimental version of the server.
+Setting it to `true` will download the experimental version of the server. Defaults to `false`.
+
+### `SERVER_QUERY_PORT`
+
+Configure the server query port. This is the port that you need to enter in the game when you first connect to a dedicated server. Defaults to `15777`.
+
+### `BEACON_PORT`
+
+Configure the beacon port. Defaults to `15000`.
+
+### `PORT`
+
+Configure the port. Defaults to `7777`.
