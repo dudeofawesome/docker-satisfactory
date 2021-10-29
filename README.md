@@ -59,3 +59,7 @@ Configure the beacon port. Defaults to `15000`.
 ### `PORT`
 
 Configure the port. Defaults to `7777`.
+
+### `AUTO_UPDATE`
+
+Decide whether the server should search for server updates on start up or not. Defaults to `false`.

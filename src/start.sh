@@ -3,7 +3,7 @@
 INSTALL_DIR=/home/steam/satisfactory
 APP_ID=1690800
 
-if [[ ! -f "$INSTALL_DIR/FactoryServer.sh" ]]; then
+if [[ ! -f "$INSTALL_DIR/FactoryServer.sh" ]] || [[ "$AUTO_UPDATE" == "true" ]]; then
     if [[ "$EXPERIMENTAL" == "true" ]]; then
         echo "Downloading experimental version"
         EXPERIMENTAL_FLAG="-beta experimental"
