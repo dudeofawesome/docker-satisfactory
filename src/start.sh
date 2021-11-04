@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "ARGS:"
-echo $@
-
 INSTALL_DIR=/home/steam/satisfactory
 APP_ID=1690800
 
